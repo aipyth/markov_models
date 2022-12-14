@@ -1,0 +1,148 @@
+% Some basic packages
+
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{textcomp}
+% \usepackage[dutch]{babel}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+% \usepackage[english,russian]{babel}
+
+% \usepackage[utf8]{inputenc}
+% \usepackage[T2A]{fontenc}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newcount\pdfminorversion
+\pdfminorversion=7
+
+% Don't indent paragraphs, leave some space between them
+\usepackage{parskip}
+
+% Hide page number when page is empty
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+% page size settings
+\usepackage{fullpage}
+% \usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+% \usepackage[top=1cm, bottom=1.5cm, left=2cm, right=4cm]{geometry}
+\usepackage[top=1cm, bottom=2cm, outer=2cm, inner=2cm, heightrounded, marginparwidth=3cm, marginparsep=1cm,headsep=0.6cm]{geometry}
+
+% for notes at the left side
+\usepackage{marginnote}
+
+% Other font I sometimes use.
+% \usepackage{cmbright}
+
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+
+% force display math for all environements
+\everymath{\displaystyle}
+
+\usepackage{witharrows}
+
+% Math stuff
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+% Fancy script capitals
+\usepackage{mathrsfs}
+\usepackage{cancel}
+% Bold math
+\usepackage{bm}
+% Some shortcuts
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+% \newcommand\C{\ensuremath{\mathbb{C}}}
+
+% Easily typeset systems of equations (French package)
+\usepackage{systeme}
+
+% Put x \to \infty below \lim
+\let\svlim\lim\def\lim{\svlim\limits}
+
+%Make implies and impliedby shorter
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+
+% Add \contra symbol to denote contradiction
+\usepackage{stmaryrd} % for \lightning
+\newcommand\contra{\scalebox{1.5}{$\lightning$}}
+
+% \let\phi\varphi
+
+% Command for short corrections
+% Usage: 1+1=\correct{3}{2}
+
+\definecolor{correct}{HTML}{009900}
+\newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
+\newcommand\green[1]{{\color{correct}{#1}}}
+
+% horizontal rule
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+% hide parts
+\newcommand\hide[1]{}
+
+% % si unitx
+% \usepackage{siunitx}
+% \sisetup{locale = FR}
+
+% Environments
+% \makeatother
+% For box around Definition, Theorem, \ldots
+\usepackage{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em}
+\theoremstyle{definition}
+\newmdtheoremenv[nobreak=true]{characteristic}{Characteristic}
+\newmdtheoremenv[nobreak=true]{lemma}{Lemma}
+\newmdtheoremenv[nobreak=true]{law}{Law}
+\newmdtheoremenv[nobreak=true]{postulate}{Postulate}
+\newtheorem*{practical}{Practical}
+\newtheorem*{terminology}{Terminology}
+\newtheorem*{example}{Example}
+
+\newmdtheoremenv[nobreak=true]{definition}{Definition}
+\newtheorem*{eg}{Example}
+\newtheorem*{notation}{Notation}
+\newtheorem*{previouslyseen}{As previously seen}
+\newtheorem*{remark}{Remark}
+% \newtheorem*{note}{Note}
+\newtheorem*{problem}{Problem}
+\newtheorem*{observe}{Observe}
+\newtheorem*{property}{Property}
+\newtheorem*{intuition}{Intuition}
+\newmdtheoremenv[nobreak=true]{prop}{Proposition}
+\newmdtheoremenv[nobreak=true]{theorem}{Theorem}
+\newmdtheoremenv[nobreak=true]{corollary}{Corollary}
+
+% Todonotes and inline notes in fancy boxes
+\usepackage{tcolorbox}
+
+% Make boxes breakable
+\tcbuselibrary{breakable}
+
+\newcommand{\boxexample}[2]{
+  \begin{tcolorbox}[colback=black!5!white,colframe=black,title={Example: #1}]
+    #2
+  \end{tcolorbox}
+}
+\author{Ivan Zhytkevych}
